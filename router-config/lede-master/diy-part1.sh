@@ -16,10 +16,6 @@
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
-sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
-
-sed -i 's/root::0:0:99999:7:::/root:$1$8sK1sK5D$F5xbVvcQAQfmteDdHQXMD0:19190:0:99999:7:::/g' package/base-files/files/etc/shadow
-
-sed -i 's/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/root:$1$8sK1sK5D$F5xbVvcQAQfmteDdHQXMD0:19190:0:99999:7:::/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 sed -i '5i src-git kenzo https://github.com/kenzok8/openwrt-packages\nsrc-git small https://github.com/kenzok8/small\nsrc-git amlogic https://github.com/ophub/luci-app-amlogic\nsrc-git tailscale https://github.com/LeanFly/luci-app-tailscale' feeds.conf.default
