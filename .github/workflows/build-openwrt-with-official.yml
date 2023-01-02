@@ -36,19 +36,19 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "5.15.62_5.19.1"
+        default: "6.1.2"
         type: choice
         options:
-          - 5.4.210_5.10.135_5.15.50
-          - 5.4.210_5.10.135
-          - 5.10.135_5.15.50
-          - 5.15.50_5.19.1
-          - 5.15.62_5.19.1
-          - 5.4.210
-          - 5.10.135
-          - 5.15.50
-          - 5.15.62
-          - 5.19.1
+          - 6.1.2
+          - 6.1.1
+          - 6.0.16
+          - 6.0.15
+          - 5.15.86
+          - 5.15.85
+          - 5.10.161
+          - 5.10.160
+          - 5.4.228
+          - 5.4.227
       auto_kernel:
         description: "Auto use the latest kernel"
         required: false
