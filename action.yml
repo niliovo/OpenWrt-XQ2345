@@ -9,15 +9,15 @@ inputs:
   openwrt_path:
     description: "Choose armvirt64 file path."
     required: false
-    default: "openwrt/bin/targets/*/*/*rootfs.tar.gz"
+    default: "/workdir/openwrt/bin/targets/*/*/*rootfs.tar.gz"
   openwrt_board:
     description: "Choose Amlogic board."
     required: false
-    default: "s905d_s905x3"
+    default: "s912"
   openwrt_kernel:
     description: "Choose kernel version."
     required: false
-    default: "5.10.125_5.15.50"
+    default: "6.1.3"
   auto_kernel:
     description: "Auto use the latest kernel."
     required: false
