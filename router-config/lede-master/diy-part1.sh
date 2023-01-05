@@ -18,4 +18,31 @@
 
 sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
-sed -i '5i src-git kenzo https://github.com/kenzok8/openwrt-packages\nsrc-git small https://github.com/kenzok8/small\nsrc-git amlogic https://github.com/ophub/luci-app-amlogic\nsrc-git tailscale https://github.com/LeanFly/luci-app-tailscale' feeds.conf.default
+sed -i '5i src-git kenzo https://github.com/kenzok8/openwrt-packages\nsrc-git small https://github.com/kenzok8/small\nsrc-git amlogic https://github.com/ophub/luci-app-amlogic' feeds.conf.default
+
+sed -i "751i \\\t\t<tr><td width=\"33%\"><%:Author HomePage%></td><td>https://hexo.niliovo.top</td></tr>" package/lean/autocore/files/x86/index.htm
+
+sed -i "742i \\\t\t<tr><td width=\"33%\"><%:Author HomePage%></td><td>https://hexo.niliovo.top</td></tr>" package/lean/autocore/files/arm/index.htm
+
+echo "
+NNNNNNNN        NNNNNNNNIIIIIIIIIILLLLLLLLLLL             IIIIIIIIII
+N:::::::N       N::::::NI::::::::IL:::::::::L             I::::::::I
+N::::::::N      N::::::NI::::::::IL:::::::::L             I::::::::I
+N:::::::::N     N::::::NII::::::IILL:::::::LL             II::::::II
+N::::::::::N    N::::::N  I::::I    L:::::L                 I::::I  
+N:::::::::::N   N::::::N  I::::I    L:::::L                 I::::I  
+N:::::::N::::N  N::::::N  I::::I    L:::::L                 I::::I  
+N::::::N N::::N N::::::N  I::::I    L:::::L                 I::::I  
+N::::::N  N::::N:::::::N  I::::I    L:::::L                 I::::I  
+N::::::N   N:::::::::::N  I::::I    L:::::L                 I::::I  
+N::::::N    N::::::::::N  I::::I    L:::::L                 I::::I  
+N::::::N     N:::::::::N  I::::I    L:::::L         LLLLLL  I::::I  
+N::::::N      N::::::::NII::::::IILL:::::::LLLLLLLLL:::::LII::::::II
+N::::::N       N:::::::NI::::::::IL::::::::::::::::::::::LI::::::::I
+N::::::N        N::::::NI::::::::IL::::::::::::::::::::::LI::::::::I
+NNNNNNNN         NNNNNNNIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLLIIIIIIIIII
+
+Power By Nili		HomePage https://hexo.niliovo.top
+───────────────────────────────────────────────────────────────────────
+
+" > package/base-files/files/etc/banner
